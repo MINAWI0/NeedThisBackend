@@ -35,12 +35,5 @@ pipeline {
             }
         }
     }
-
-    post {
-        always {
-            // Always run this block after the build, regardless of success or failure
-            //junit '**/target/surefire-reports/TEST-*.xml' // Adjust if needed
-        }
-    }
 }
 
