@@ -34,6 +34,12 @@ pipeline {
                 archiveArtifacts artifacts: 'target/*.jar', fingerprint: true
             }
         }
+         stage('Trigger Another Job') {
+            steps {
+                // Call another job
+                build job: 'code-quality'
+            }
+        }
     }
 }
 
